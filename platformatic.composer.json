@@ -1,0 +1,34 @@
+{
+  "server": {
+    "logger": {
+      "level": "{PLT_SERVER_LOGGER_LEVEL}",
+      "transport": {
+        "target": "pino-pretty"
+      }
+    },
+    "hostname": "{PLT_SERVER_HOSTNAME}",
+    "port": "{PLT_COMPOSER_PORT}",
+    "cors": {
+      "origin": "{PLT_SERVER_CORS_ORIGIN}"
+    }
+  },
+  "composer": {
+    "services": [
+      {
+        "id": "1",
+        "origin": "http://127.0.0.1:3042/",
+        "openapi": {
+          "url": "http://127.0.0.1:3042/api/documentation/json",
+          "prefix": ""
+        }
+      }
+    ],
+    "openapi": {
+      "info": {
+        "title": "Composer Service 1",
+        "description": "THE PLT DB running on localhost:3042",
+        "version": "0.0.1"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "platformatic start",
+    "migrate": "platformatic db migrations apply",
+    "fos": "platformatic composer openapi schemas fetch"
+  },
+  "devDependencies": {
+    "fastify": "^4.22.0"
+  },
+  "dependencies": {
+    "platformatic": "^0.38.1",
+    "@platformatic/db": "^0.38.1",
+    "@platformatic/composer": "^0.26.1"
+  },
+  "engines": {
+    "node": "^18.8.0"
+  }
+}
